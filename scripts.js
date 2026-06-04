@@ -1,4 +1,4 @@
-
+import { la_cle } from "./config";
 
 
 
@@ -687,7 +687,7 @@ Réponse :
       method: "POST",
       headers: {
         
-         
+         "Authorization": `Bearer ${la_cle}`,
          "Content-Type": "application/json"
       },
       body: JSON.stringify({
