@@ -458,7 +458,7 @@ document.addEventListener("click", async (e) => {
 
   const idee =
   idees.find(
-    idee => idee.id === id
+    idee => Number(idee.id) === id
   )
 
   currentIdeaId = id
@@ -486,7 +486,7 @@ document
 
   const idee =
   idees.find(
-    idee => idee.id === currentIdeaId
+    idee => Number(idee.id) === currentIdeaId
   )
 
   idee.titre =
