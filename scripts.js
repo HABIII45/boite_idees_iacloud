@@ -480,6 +480,7 @@ document.addEventListener("click", async (e) => {
  
 }
 })
+chargerIdees()
 document
 .getElementById("save-edit")
 .addEventListener("click", async () => {
