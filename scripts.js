@@ -681,24 +681,29 @@ Réponse :
 
 `
 
-  const response = await fetch(
-    "https://openrouter.ai/api/v1/chat/completions",
-    {
-      method: "POST",
-      headers: {
+//   const response = await fetch(
+//     "https://openrouter.ai/api/v1/chat/completions",
+//     {
+//       method: "POST",
+//       headers: {
         
-         //"Authorization": `Bearer ${la_cle}`,
-         "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        model: "google/gemma-4-31b-it",
-        messages: [{role: "user",content:prompt}],
-        stream: false
-      })
-    }
-  )
+//          //"Authorization": `Bearer ${la_cle}`,
+//          "Content-Type": "application/json"
+//       },
+//       body: JSON.stringify({
+//         model: "google/gemma-4-31b-it",
+//         messages: [{role: "user",content:prompt}],
+//         stream: false
+//       })
+//     }
+//   )
 
-  const data = await response.json()
+//   const data = await response.json()
 
-  return data.choices[0].message.content.trim()
-}
+//   return data.choices[0].message.content.trim()
+ }
+
+fetch("/.netlify/functions/openrouter", {
+  method: "POST",
+  body: JSON.stringify({ prompt })
+});
