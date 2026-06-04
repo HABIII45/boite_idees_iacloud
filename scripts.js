@@ -241,7 +241,7 @@ categorieIA = categorieIA
   if (!error) {
   chargerIdees(); // recharge depuis la base
 }
-
+chargerIdees()
   
 
  rechargerFormulaire()
