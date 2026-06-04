@@ -426,7 +426,7 @@ document.addEventListener("click", async (e) => {
     Number(e.target.dataset.id)
 
     idees = idees.filter(
-      idee => idee.id !== id
+      idee => Number(idee.id) !== id
     )
 
     // localStorage.setItem(
