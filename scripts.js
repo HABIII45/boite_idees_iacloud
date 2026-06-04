@@ -718,7 +718,8 @@ Réponse :
   const content = data?.choices?.[0]?.message?.content;
 
   if (!content) {
-    throw new Error("Réponse IA invalide");
+     console.log("IA response complète:", data);
+     throw new Error("Réponse IA invalide");
   }
 
   return content.trim();
