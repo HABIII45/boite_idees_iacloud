@@ -211,7 +211,7 @@ form.addEventListener("submit", async (e) => {
     description.value
 )
 categorieIA = categorieIA
-  //.trim()
+  .trim()
   .toLowerCase()
   .replace(/[^a-z]/g, "");
 
@@ -701,9 +701,13 @@ Réponse :
 //   const data = await response.json()
 
 //   return data.choices[0].message.content.trim()
- }
+ 
 
-fetch("/.netlify/functions/openrouter", {
+const response = await fetch("/.netlify/functions/openrouter", {
   method: "POST",
+   headers: {
+      "Content-Type": "application/json"
+    },
   body: JSON.stringify({ prompt })
 });
+}
