@@ -703,11 +703,23 @@ Réponse :
 //   return data.choices[0].message.content.trim()
  
 
-const response = await fetch("/.netlify/functions/openrouter", {
-  method: "POST",
-   headers: {
+ const response = await fetch("/.netlify/functions/openrouter", {
+    method: "POST",
+    headers: {
       "Content-Type": "application/json"
     },
-  body: JSON.stringify({ prompt })
-});
+    body: JSON.stringify({ prompt })
+  });
+
+  const data = await response.json();
+
+  console.log("IA response:", data);
+
+  const content = data?.choices?.[0]?.message?.content;
+
+  if (!content) {
+    throw new Error("Réponse IA invalide");
+  }
+
+  return content.trim();
 }
