@@ -199,7 +199,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 form.addEventListener("submit", async (e) => {
-  //console.log("submit déclenché")
+  
   e.preventDefault()
   // showLoading()
   if (!TitreValide()) return;
@@ -479,8 +479,9 @@ document.addEventListener("click", async (e) => {
   modal.show()
  
 }
-})
 chargerIdees()
+})
+
 document
 .getElementById("save-edit")
 .addEventListener("click", async () => {
@@ -516,7 +517,7 @@ document
     )
     .hide()
     chargerIdees()
-
+chargerIdees()
 })
 document.addEventListener("click", async(e) => {
 
