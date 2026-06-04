@@ -239,7 +239,7 @@ categorieIA = categorieIA
   .from('ideas')
   .insert([nouvelleIdee])
   if (!error) {
-  afficherIdees(); // recharge depuis la base
+  chargerIdees(); // recharge depuis la base
 }
 
   
