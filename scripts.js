@@ -211,7 +211,7 @@ form.addEventListener("submit", async (e) => {
     description.value
 )
 categorieIA = categorieIA
-  .trim()
+  //.trim()
   .toLowerCase()
   .replace(/[^a-z]/g, "");
 
