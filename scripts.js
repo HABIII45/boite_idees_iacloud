@@ -529,7 +529,7 @@ document.addEventListener("click", async(e) => {
 
     const idee =
     idees.find(
-      idee => idee.id === id
+      idee => Number(idee.id) === id
     )
 
     idee.archivee = true
@@ -547,7 +547,7 @@ document.addEventListener("click", async(e) => {
   }
 
 })
-afficherIdees()
+chargerIdees()
 document
 .getElementById("show-archives")
 .addEventListener("click", () => {
