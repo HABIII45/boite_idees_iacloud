@@ -17,7 +17,7 @@ const supabaseClient = window.supabase.createClient(
 // let idees =
 // JSON.parse(localStorage.getItem("idees")) || []
 let idees = []
-//let currentIdeaId = null
+let currentIdeaId = null
 // const id = Number(currentIdeaId);
 
  function erreur(champ) {
