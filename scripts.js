@@ -241,11 +241,11 @@ categorieIA = categorieIA
   if (!error) {
   chargerIdees(); // recharge depuis la base
 }
-chargerIdees()
+
   
 
  rechargerFormulaire()
-
+ chargerIdees()
 })
 
 function afficherIdees() {
@@ -411,7 +411,7 @@ archives.length > 0
     ideasContainer.appendChild(cardWrapper)
 
   })
-
+ chargerIdees()
 }
 
 document.addEventListener("click", async (e) => {
