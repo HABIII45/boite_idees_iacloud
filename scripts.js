@@ -479,9 +479,9 @@ document.addEventListener("click", async (e) => {
   modal.show()
  
 }
-chargerIdees()
-})
 
+})
+chargerIdees()
 document
 .getElementById("save-edit")
 .addEventListener("click", async () => {
@@ -517,8 +517,9 @@ document
     )
     .hide()
     chargerIdees()
-chargerIdees()
+
 })
+chargerIdees()
 document.addEventListener("click", async(e) => {
 
   if (e.target.classList.contains("archive-btn")) {
