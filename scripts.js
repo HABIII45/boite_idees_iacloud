@@ -1,4 +1,4 @@
-import { la_cle } from "./config";
+import { la_cle } from "./config.js";
 
 
 
