@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Boite à idées </title>
+</head>
+<body  class="bg-light">
+    <div class="container py-5">
+    <section>
+        <header class="text-center mb-5">
+            <img src="images/Image collée.png" width="90">
+
+             <h1 class="fs-3 fw-semibold mt-2">
+                   Sunu-Idées
+             </h1>
+
+             <p class="text-muted">
+              La boîte à idées collaborative
+              </p>
+              <button
+              id="show-archives"
+              class="btn btn-outline-secondary">
+              Voir les archives
+              </button>
+              <button id="show-ideas"  class="btn btn-outline-secondary" style="display:none;">
+              Retour aux idées
+              </button>
+        </header>
+    </section>
+    <section>
+    <form class="p-4 shadow rounded bg-white" id="idea-form">
+        <div class="mb-3">
+         <label for="titre" class="form-label" >Titre</label>
+            <input id="title" class="form-control" type="text" placeholder="Mettez ici le titre"  class="form-control">
+          <small id = "titre-erreur"></small>
+          </div>
+        
+         <!-- <div class="mb-3">
+         <label for="categorie" class="form-label">Categories</label>
+           <select  id="categorie" class="form-select">
+            <option selected>
+            Sélectionnez une catégorie
+            </option>
+            <option value="pedagogie" >Pedagogie</option>
+             <option value="evenement" >Evenement</option>
+              <option value="campus" >Vie de campus</option>
+              <option value="technique">Technique</option>
+           </select>
+           </div> -->
+           <div class="mb-3">
+           <label for="description" class="form-label">Description</label>
+            <textarea id="description"   class="form-control"
+              rows="5" placeholder="Decrivez votre idée"></textarea>
+           <small id = "desc-erreur"></small>
+           </div>
+        <button type="submit" class="btn btn-outline-info"  id="submit-btn" disabled>Soumettre mon idée</button>
+    </form>
+    </section>
+    
+    <section
+       id="ideas-container"
+       class="row g-3 mt-4">
+   
+    </section>
+    <section>
+        <footer >Sunu-Idées
+           <small >© 2026 Sunu-Idées. Ensemble, partageons les idées qui font avancer.</small> 
+        </footer>
+    </section>
+    </div>
+   <section>
+    <div class="modal fade" id="editModal" tabindex="-1">
+
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+
+      <div class="modal-header">
+
+        <h5 class="modal-title">
+          Modifier une idée
+        </h5>
+
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal">
+          
+        </button>
+
+      </div>
+
+      <div class="modal-body">
+
+        <input
+          type="text"
+          id="edit-title"
+          class="form-control mb-3">
+
+        <textarea
+          id="edit-description"
+          class="form-control"
+          rows="4">
+        </textarea>
+
+      </div>
+
+      <div class="modal-footer">
+
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal">
+
+          Annuler
+
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="save-edit">
+
+          Enregistrer
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+<div  id="loading" class="modal fade" id="loadingModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+
+        <div class="spinner-border mb-3"></div>
+
+        <p>Analyse de l'idée en cours...</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+   </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

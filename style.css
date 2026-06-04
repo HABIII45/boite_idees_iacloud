@@ -1,0 +1,63 @@
+
+
+
+.filters a{
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+
+}
+.filters{
+   
+   margin-bottom: 20px;
+   margin-left: 30%;
+  
+   margin-top: 50px;
+}
+
+.des{
+    font-size: small;
+    
+}
+
+
+.note-pedagogie{
+  background:#fef3c7;
+}
+
+.note-evenement{
+  background:#dbeafe;
+}
+
+.note-campus{
+  background:#f3e8ff;
+}
+
+.note-technique{
+  background:#dcfce7;
+}
+.card{
+  transition:transform .2s ease;
+}
+
+
+select.error,
+input.error,
+textarea.error {
+  border-color: red !important;
+}
+
+select.success,
+input.success,
+textarea.success {
+  border-color: green !important;
+}
+#submit-btn {
+  transition: all 0.2s ease;
+}
+
+#submit-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: scale(0.98);
+}
