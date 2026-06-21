@@ -1,5 +1,7 @@
 
-import { supabaseKey, supabaseUrl } from "./config.js";
+ const supabaseUrl = "https://nwiowdfinufsysfluxok.supabase.co";
+  const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im53aW93ZGZpbnVmc3lzZmx1eG9rIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1NTk1NjEsImV4cCI6MjA5NjEzNTU2MX0.dT_g0CTlcD9wbHsfVlBJjFvIY0kKF07msi48DziqTy0"; 
+
 
 
 const supabaseClient = window.supabase.createClient(
